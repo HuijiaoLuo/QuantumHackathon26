@@ -62,6 +62,10 @@ qubit.py                       VirtualQubit / VirtualQubitPair simulator
 pyproject.toml                 dependencies (laboneq, numpy, scipy, matplotlib)
 LICENSE                        Apache-2.0
 run_m5.ipynb                   one-cell-per-step walkthrough of M5
+raw_data_comparison.txt        RAW DATA COMPARISON — M5 vs Classical Pipeline
+test_main.py                   CI entry point: Automated validation of qubit frequency and coherence ($T_1$, $T_2^*$)
+.github/
+   workflows/                  Contains python-tests.yml for automated CI/CD testing on every push.
 optimized/
   optimized_tuneup.py          chirp_spectroscopy, bayesian_rabi, active_reset
   joint_estimator.py           ground-truth helper
