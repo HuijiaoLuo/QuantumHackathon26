@@ -18,7 +18,7 @@ pip install -e .
 # either run from the command line ...
 python optimized/joint_estimator_grid.py
 
-# ... or step through the notebook
+# ... or step through the notebook. If you did not install jupyterlab, please run pip install jupyterlab
 jupyter lab run_m5.ipynb
 ```
 
