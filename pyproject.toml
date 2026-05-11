@@ -10,7 +10,21 @@ dependencies = [
     "numpy>=2.4",
     "qutip>=5.2",
 ]
- 
+
+[project.optional-dependencies]
+test = [
+    "pytest",
+]
+
+[tool.setuptools]
+# Explicitly include the 'optimized' directory and the 'qubit' module
+packages = ["optimized"]
+py-modules = ["qubit"]
+
+[tool.setuptools.package-data]
+# Ensure any non-python files needed for logic are included (optional)
+"*" = ["*.png", "*.pdf"]
+
 [build-system]
 requires = ["setuptools>=68"]
 build-backend = "setuptools.build_meta"

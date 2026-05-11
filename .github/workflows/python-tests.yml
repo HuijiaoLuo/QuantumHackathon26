@@ -24,12 +24,12 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        # Directly install required libraries instead of building the package
-        pip install numpy>=2.4 laboneq==26.4.0 qutip>=5.2 matplotlib>=3.10 pytest
+        # Install the project in editable mode with test dependencies
+        # This uses your updated pyproject.toml configuration
+        pip install -e ".[test]"
         
     - name: Execute automated tests
       run: |
-        # Manually set PYTHONPATH to include 'optimized' and root
-        # This allows test_main.py to find your modules without 'pip install .'
-        export PYTHONPATH=$PYTHONPATH:$(pwd):$(pwd)/optimized
+        # Since the project is installed with -e, 
+        # PYTHONPATH is handled automatically by site-packages
         pytest test_main.py -v -s
