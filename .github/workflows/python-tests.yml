@@ -25,7 +25,7 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         # Install core dependencies and pytest for testing
-        pip install numpy scipy matplotlib laboneq pytest
+        pip install .
         # If you have a pyproject.toml, you can also run: pip install .
         
     - name: Execute automated tests
